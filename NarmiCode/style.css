@@ -1,0 +1,449 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+/* General styles */
+body, html {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #e6b800;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(1, 1, 32);
+    color: #ffcc00;
+    padding: 20px 0;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header img {
+    width: 130px;
+    border-radius: 70px;
+    margin: 20px 0;
+    /*animation: rotateLogo 4s infinite linear;*/
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in 1s forwards;
+}
+
+/* Login and registration form styles */
+#login-page{
+    background: rgb(1, 1, 32);
+}
+
+#login-page footer{
+    background: transparent;
+    color: #333;
+}
+
+#login-form h2 {
+    color: rgb(1, 1, 32);
+}
+
+form {
+    background: #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in;
+}
+
+form input {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 13px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #e6b800;
+    outline: none;
+}
+
+form button , #logout-button{
+    background-color: rgb(1, 1, 32);
+    font-weight: bolder;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover , #logout-button:hover {
+    color: rgb(1, 1, 32);
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Member list */
+#member-list h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+#member-list ol li {
+    list-style-type: none;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+
+/*Admin Sector*/
+
+.admin {
+    text-align: center;
+}
+
+.admin-content {
+    align-items: center;
+}
+
+.admin-img {
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.admin-img:hover {
+    transform: scale(1.1);
+}
+
+.social-icons {
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+.facebook { 
+    background-image: url('images/facebook.png'); 
+    width: 25px;
+}
+.twitter { background-image: url('images/twitter.png'); }
+.linkedin { background-image: url('images/linkedin.png'); }
+.github { background-image: url('images/github.png'); }
+.whatsapp { background-image: url('images/whatsapp.png'); }
+
+/* Main content */
+main {
+    margin: 20px;
+}
+
+h2 {
+    margin: 10px;
+    color: rgb(23, 23, 71);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Community Features */
+#community-features ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeInLeft 1s ease-out;
+}
+
+#community-features li {
+    background-color: rgb(1, 1, 32);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+#community-features li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+#community-features li:hover:before {
+    left: 100%;
+}
+
+#community-features p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+#community-features ul li strong {
+    width: 80%;
+    max-width: 400px;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+
+#faq h2 ,h3 , p{
+    padding: 2px;
+    margin: 20px;
+}
+
+/* Call to Action (CTA) */
+#cta a {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(1, 1, 32);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 2s ease-in-out;
+}
+
+#cta a:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Logout button */
+/*#logout-button {
+    font-weight: bolder;
+    border: none;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    animation: fadeInRight 1s ease-out;
+}*/
+
+/* Footer */
+footer nav ul {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    color: rgb(1, 1, 32);
+    font-weight: bolder;
+    list-style-type: none;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: rgb(1, 1, 32);
+    margin-bottom: 10px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-left: 5px solid rgb(1, 1, 32);
+    margin: 20px 0;
+    font-style: italic;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 4em;
+    color: #ccc;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: transparent;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+a {
+    margin: 5px;
+    padding: 3px;
+    background: rgb(1, 1, 32);
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(1, 1, 32);
+    background-color: #ffcc00;
+    border: 1px solid rgb(1, 1, 32);
+}
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); }
+    to { transform: translateX(0); }
+}
+
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rotateLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    #cta a {
+        font-size: 1em;
+    }
+    
+    form {
+        padding: 15px;
+    }
+}
